@@ -3,13 +3,11 @@ package com.ilopezluna;
 import com.ilopezluna.entities.Team;
 import com.ilopezluna.repositories.TeamRepository;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 
 
-@EnableAutoConfiguration
-@ComponentScan
+@SpringBootApplication
 public class Application {
 
     public static void main(String[] args) throws Exception {
@@ -23,6 +21,5 @@ public class Application {
         for (Team current : teamRepository.findAll()) {
             System.out.println("Current team: " + current.toString());
         }
-
     }
 }
